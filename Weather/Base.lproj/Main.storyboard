@@ -1,7 +1,76 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ic6-Ev-6fR">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Weather View Controller-->
+        <scene sceneID="1zX-wt-UAZ">
+            <objects>
+                <viewController id="ic6-Ev-6fR" customClass="WeatherViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QPq-LR-p0C"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hq4-jJ-bMa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UCr-VP-zho">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GZf-AU-v7u">
+                                <rect key="frame" x="252" y="404" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="ZhC-Xr-cC6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DeQ-MF-7kt">
+                                <rect key="frame" x="180" y="198" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZrK-nu-Xov">
+                                <rect key="frame" x="180" y="62" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.048144967550000001" green="0.048437108550000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Dm2-Z6-WHB"/>
+                                    <constraint firstAttribute="width" constant="240" id="Od3-GL-NDY"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEz-Zz-X32">
+                                <rect key="frame" x="277" y="462" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="searchButtontapped:" destination="ic6-Ev-6fR" eventType="touchUpInside" id="RV0-Hd-Ex4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UEz-Zz-X32" firstAttribute="top" secondItem="GZf-AU-v7u" secondAttribute="bottom" constant="28" id="6Vm-VK-stM"/>
+                            <constraint firstItem="DeQ-MF-7kt" firstAttribute="centerX" secondItem="GZf-AU-v7u" secondAttribute="centerX" id="ASl-bt-Vv2"/>
+                            <constraint firstItem="ZrK-nu-Xov" firstAttribute="trailing" secondItem="DeQ-MF-7kt" secondAttribute="trailing" id="GcB-RP-p98"/>
+                            <constraint firstItem="DeQ-MF-7kt" firstAttribute="top" secondItem="ZrK-nu-Xov" secondAttribute="bottom" constant="8" symbolic="YES" id="Gm0-ze-seb"/>
+                            <constraint firstItem="DeQ-MF-7kt" firstAttribute="leading" secondItem="ZrK-nu-Xov" secondAttribute="leading" id="U9V-RH-KQu"/>
+                            <constraint firstItem="UEz-Zz-X32" firstAttribute="centerX" secondItem="GZf-AU-v7u" secondAttribute="centerX" id="Xx5-xq-k4k"/>
+                            <constraint firstItem="Hq4-jJ-bMa" firstAttribute="top" secondItem="GZf-AU-v7u" secondAttribute="bottom" constant="166" id="dYT-kC-kFf"/>
+                            <constraint firstItem="ZrK-nu-Xov" firstAttribute="top" secondItem="QPq-LR-p0C" secondAttribute="bottom" constant="42" id="gZ4-zV-7P3"/>
+                            <constraint firstItem="ZrK-nu-Xov" firstAttribute="centerX" secondItem="UCr-VP-zho" secondAttribute="centerX" id="ob9-Jj-kvf"/>
+                            <constraint firstItem="GZf-AU-v7u" firstAttribute="top" secondItem="DeQ-MF-7kt" secondAttribute="bottom" constant="78" id="rwX-Ux-0Aj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="ZrK-nu-Xov" id="OaI-Yi-as0"/>
+                        <outlet property="textField" destination="GZf-AU-v7u" id="IrH-sM-fDt"/>
+                        <outlet property="textView" destination="DeQ-MF-7kt" id="veF-cA-8We"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="etk-qc-EvQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="867" y="56"/>
+        </scene>
+    </scenes>
 </document>
