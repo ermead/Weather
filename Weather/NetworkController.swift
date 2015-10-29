@@ -35,6 +35,9 @@ class NetworkController {
             }
             completion(resultData: data)
             print("result data")
+            print(data)
+           
+            
         }
         dataTask.resume()
     }

@@ -24,12 +24,15 @@ class WeatherController {
             }
             do {
                 let resultsAnyObject = try NSJSONSerialization.JSONObjectWithData(resultData, options: NSJSONReadingOptions.AllowFragments)
+                print("performed do")
+                print(resultsAnyObject)
                 
                 var weatherModelObject: Weather?
                 
                 if let weatherDictionary = resultsAnyObject as? [String: AnyObject] {
                     weatherModelObject = Weather(jsonDictionary: weatherDictionary)
-                }
+                   print(resultsAnyObject) 
+                } else { print("possible error")}
                 completion(result: weatherModelObject)
             } catch {
                 completion(result: nil)

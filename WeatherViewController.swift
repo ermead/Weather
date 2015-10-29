@@ -29,11 +29,7 @@ class WeatherViewController: UIViewController {
             guard let weatherResult = result else {print("Something");return}
             
             //dispatch_async(dispatch_get_main_queue()) { () in
-                
-            print(weatherResult.cityName)
-            print(weatherResult.description)
-            print(weatherResult.temperatureK)
-            print(weatherResult.main)
+            print("reachd view")
         })
             }
         }
